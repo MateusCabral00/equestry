@@ -4,7 +4,7 @@
 
 # Objetivo
 
-  Nesse projeto objetiva-se praticar conceitos fundamentais do django rest framework tais como: paginação, autenticação, permição e versionamento.
+  Nesse projeto objetiva-se praticar conceitos fundamentais do django rest framework tais como: paginação, autenticação, permissão e versionamento.
 
 # Inicialização
 
