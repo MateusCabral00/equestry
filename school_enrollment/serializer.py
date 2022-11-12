@@ -1,23 +1,24 @@
-from school_enrollment.models import Aluno, Curso, Matricula
+from school_enrollment.models import Aluno, Curso, Matricula, Disciplina
 from rest_framework import serializers
 
 
 class AlunoSerializer(serializers.ModelSerializer):
     class Meta:
         model = Aluno
-        fields = ['id', 'nome', 'rg', 'cpf', 'data_nascimento', 'foto_do_aluno']
+        fields = ['id', 'nome', 'rg', 'cpf',
+                  'data_nascimento', 'foto_do_aluno']
 
 
 class CursoSerializer(serializers.ModelSerializer):
     class Meta:
         model = Curso
-        fields = ['codigo_curso', 'descricao', 'nivel']
+        fields = ['codigo', 'descricao', 'nivel']
 
 
 class MatriculaSerializer(serializers.ModelSerializer):
     class Meta:
         model = Matricula
-        exclude = []
+        fields = "__all__"
 
 
 class ListaMatriculasSerializer(serializers.ModelSerializer):
@@ -38,6 +39,12 @@ class ListaAlunosMatriculadosSerializer(serializers.ModelSerializer):
     class Meta:
         model = Matricula
         fields = ['aluno_nome']
+
+
+class DisciplinaSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Disciplina
+        fields = '__all__'
 
 
 class AlunoSerializerV2(serializers.ModelSerializer):
