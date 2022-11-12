@@ -40,7 +40,7 @@ class Migration(migrations.Migration):
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('nome', models.CharField(max_length=100)),
                 ('descricao', models.CharField(max_length=200)),
-                ('curso', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='school_enrollment.curso')),
+                ('curso', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='equestry.curso')),
             ],
         ),
         migrations.CreateModel(
@@ -48,9 +48,9 @@ class Migration(migrations.Migration):
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('periodo', models.CharField(choices=[('M', 'Matutino'), ('V', 'Vespertino'), ('N', 'Noturno')], default='M', max_length=1)),
-                ('aluno', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='school_enrollment.aluno')),
-                ('curso', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='school_enrollment.curso')),
-                ('disciplina', models.ManyToManyField(to='school_enrollment.disciplina')),
+                ('aluno', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='equestry.aluno')),
+                ('curso', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='equestry.curso')),
+                ('disciplina', models.ManyToManyField(to='equestry.disciplina')),
             ],
         ),
     ]

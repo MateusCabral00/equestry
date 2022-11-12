@@ -1,7 +1,7 @@
 from rest_framework import viewsets, generics
 from rest_framework.response import Response
-from school_enrollment.models import Aluno, Curso, Matricula, Disciplina
-from school_enrollment.serializer import AlunoSerializer, AlunoSerializerV2, CursoSerializer, CursoSerializerV2, MatriculaSerializer, ListaMatriculasSerializer, ListaAlunosMatriculadosSerializer, DisciplinaSerializer
+from equestry.models import Aluno, Curso, Matricula, Disciplina
+from equestry.serializer import AlunoSerializer, AlunoSerializerV2, CursoSerializer, CursoSerializerV2, MatriculaSerializer, ListaMatriculasSerializer, ListaAlunosMatriculadosSerializer, DisciplinaSerializer
 
 
 class AlunosViewSet(viewsets.ModelViewSet):

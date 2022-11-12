@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.urls import path, include
-from school_enrollment.views import AlunosViewSet, CursosViewSet, MatriculaViewSet, DisciplinasViewSet, ListaAlunoMatriculas, ListaAlunosMatriculados, ListaCursoDisciplinas
+from equestry.views import AlunosViewSet, CursosViewSet, MatriculaViewSet, DisciplinasViewSet, ListaAlunoMatriculas, ListaAlunosMatriculados, ListaCursoDisciplinas
 from rest_framework import routers
 from django.conf import settings
 from django.conf.urls.static import static

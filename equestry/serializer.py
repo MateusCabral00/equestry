@@ -1,4 +1,4 @@
-from school_enrollment.models import Aluno, Curso, Matricula, Disciplina
+from equestry.models import Aluno, Curso, Matricula, Disciplina
 from rest_framework import serializers
 
 
